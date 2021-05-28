@@ -12,17 +12,17 @@ function Maze() {
     const mazeList = []
 
     for (let i = 0; i < maze.length; i++) {
-        const cellList = []
+        const cellList1 = []
         for (let j = 0; j < maze[i].length; j++) {
             if (i === 0 && j === 0) {
-                cellList.push(<Cell key={uuidv1()} img={'covid.jpg'}/>)
+                cellList1.push(<Cell key={uuidv1()} img={'covid.jpg'}/>)
             } else if (i === 3 && j === 3) {
-                cellList.push(<Cell key={uuidv1()} img={'human.png'}/>)
+                cellList1.push(<Cell key={uuidv1()} img={'human.png'}/>)
             } else {
-                cellList.push(<Cell key={uuidv1()} color={colors[maze[i][j]]}/>)
+                cellList1.push(<Cell key={uuidv1()} color={colors[maze[i][j]]}/>)
             }
         }
-        mazeList.push(<Grid key={uuidv1()} container item xs={12}>{cellList}</Grid>)
+        mazeList.push(<Grid key={uuidv1()} container item xs={12}>{cellList1}</Grid>)
     }
 
     return (
